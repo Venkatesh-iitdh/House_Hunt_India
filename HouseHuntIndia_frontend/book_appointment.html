@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+     
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+     
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="css/style.css">
+     
+     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Book Appointment</title>
+    <style>
+        /* Color theme similar to property listing page */
+        :root {
+            --primary-color: #080808;
+            --secondary-color: #ecf0f1;
+            --text-color: #2c3e50;
+            --background-color: #ffffff;
+            --input-bg-color: #f2f2f2;
+            --input-border-color: #ddd;
+            --button-hover-color: #200603;
+            --navbar-bg-color: #333;
+            --footer-bg-color: #111;
+        }
+
+        /* General Body and Background */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 28px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid var(--input-border-color);
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: var(--input-bg-color);
+            color: var(--text-color);
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--button-hover-color);
+        }
+
+        header {
+            background-color: var(--navbar-bg-color);
+            padding: 10px 0;
+            color: white;
+        }
+
+        header a {
+            color: white;
+            font-size: 18px;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: var(--footer-bg-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+
+        <nav class="navbar nav-1">
+           <section class="flex">
+              <a href="home.html" class="logo"><i class="fas fa-house"></i>HouseHuntIndia</a>
+     
+              <ul>
+                 <li><a href="post_property.html">post property<i class="fas fa-paper-plane"></i></a></li>
+              </ul>
+           </section>
+        </nav>
+     
+        <nav class="navbar nav-2">
+           <section class="flex">
+              <div id="menu-btn" class="fas fa-bars"></div>
+     
+              <div class="menu">
+                 <ul>
+                    <li><a href="#">buy<i class="fas fa-angle-down"></i></a>
+                       <ul>
+                          <li><a href="house_buy.html">house</a></li>
+                          <li><a href="flat_buy.html">flat</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="#">sell<i class="fas fa-angle-down"></i></a>
+                       <ul>
+                          <li><a href="post_property.html">post property</a></li>
+                          <li><a href="#">dashboard</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="#">rent<i class="fas fa-angle-down"></i></a>
+                       <ul>
+                          <li><a href="rent_house.html">house</a></li>
+                          <li><a href="flat_rent.html">flat</a></li>
+                          <!-- <li><a href="#">shop</a></li> -->
+                       </ul>
+                    </li>
+                    <li><a href="#">help<i class="fas fa-angle-down"></i></a>
+                       <ul>
+                          <li><a href="#">about us</a></i></li>
+                          <li><a href="contact.html">contact us</a></i></li>
+                          <li><a href="contact.html#faq">FAQ</a></i></li>
+                       </ul>
+                    </li>
+                 </ul>
+              </div>
+     
+              <ul>
+                 <li><a href="#">saved <i class="far fa-heart"></i></a></li>
+                 <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+                    <ul>
+                       <li><a href="login.html">login</a></li>
+                       <li><a href="register.html">register</a></li>
+                    </ul>
+                 </li>
+              </ul>
+           </section>
+        </nav>
+     
+     </header>
+
+    <!-- Appointment Booking Form -->
+    <div class="container">
+        <h1>Book an Appointment</h1>
+        <form action="/book-appointment" method="POST">
+            <!-- Appointment Details -->
+            <label for="sellerName">Seller Name</label>
+            <input type="text" id="sellerName" name="sellerName" required>
+
+            <label for="buyerName">Your Name</label>
+            <input type="text" id="buyerName" name="buyerName" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contactNumber">Contact Number</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+
+            <label for="appointmentDate">Appointment Date</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+            <label for="appointmentTime">Appointment Time</label>
+            <input type="time" id="appointmentTime" name="appointmentTime" required>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <a href="home.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">About</a>
+    </footer>
+</body>
+</html>
